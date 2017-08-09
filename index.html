@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+    // moment.js 
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="assets/javascript/app.js"></script>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+	  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	  <title>Train Activity</title>
+</head>
+<body>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-xs-12">
+				<div class = "jumbotron">
+				<h1><i class="fa fa-train" aria-hidden="true"></i>  Anytime is Train Time..</h1>
+				<h3>Choo Cho.. Chee Chee..</h3>
+					
+				</div> <!-- end jumbotron -->
+				
+			</div> <!-- end col XS 12 -->
+			
+		</div> <!-- end row -->
+
+		<div class = "row">
+			<div class = "col-xs-12">
+				<div class = "panel panel-default">
+					<div class = "panel-heading" id = "panel-heading">Current Train Schedule</div> <!-- end panel heading -->
+
+					<div class = "panel-body">
+						<table class="table table-striped" id="train-table">
+							<thead>
+									<tr>
+										<th class="text-center">
+											Train Name
+										</th>
+										<th class="text-center">
+											Destination
+										</th>
+										<th class="text-center">
+											Frequency (min)
+										</th>
+										<th class="text-center">
+											Next Arrival
+										</th>
+										<th class="text-center">
+											Minutes Away
+										</th>
+									</tr>
+							</thead>
+							<tbody id="trains">
+							
+						</table>
+						
+					</div> <!-- end panel body -->
+				
+				</div> <!-- end panel panel default -->
+				
+			</div> <!-- end col XS 12 -->
+			
+		</div> <!-- end row
+		 -->
+	</div> <!-- end container -->
+
+
+	<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+						<div class="panel-heading" id="panel-heading"> Add Train</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<label>Train Name: </label>
+									<input class="form-control" id="train-name">
+								</div> <!-- end form group -->
+								<div class="form-group">
+									<label>Destination: </label>
+									<input class="form-control" id="destination">
+								</div><!-- end form group -->
+								<div class="form-group">
+									<label>First Train Time (HH:MM - military time): </label>
+									<input class="form-control" id="first-train-time">
+								</div><!-- end form group -->
+								<div class="form-group">
+									<label>Frequency (min): </label>
+									<input class="form-control" id="frequency">
+								</div><!-- end form group -->
+								<button type="button" class="btn btn-default" id="submit-button"> Submit</button>
+							</form>
+						</div> <!-- end panel body -->
+				</div> <!-- end panel heading -->
+			</div><!-- end panel panel default -->
+		</div><!-- end col XS 12 -->
+	</div> <!-- end row -->
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
