@@ -1,0 +1,14 @@
+body{
+  /*background-color: #426E70;*/
+  font-family: 'Lato', sans-serif;
+}
+.jumbotron{
+  background-color: #426E70;
+  color:white;
+}
+#panel-heading{
+  background-color: #426E70;
+  color:white;
+  font-weight: bold;
+  font-size: 16px;
+}
