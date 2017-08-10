@@ -4,25 +4,29 @@
  	<meta charset="UTF-8">
  	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- reset -->
+	<link rel="stylesheet" href="assets/css/reset.css">
 
+	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-
-	<link rel="stylesheet" href="assets/css/style.css">
-
+	<!-- font awsome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<!-- fire base -->
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+
+	<!-- style.css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- jQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      
-     <!-- <script src="assets/javascript/app.js"></script>
- 
-     
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-     
- 	  <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+   
  	  <title>Train Activity</title>
  </head>
  <body>
@@ -31,7 +35,7 @@
  			<div class = "col-xs-12">
  				<div class = "jumbotron">
  				<h1><i class="fa fa-train" aria-hidden="true"></i>  Anytime is Train Time..</h1>
- 				<h3>Choo Cho.. Chee Chee..</h3>
+ 				<h3>Choo Choo.. Chee Chee..</h3>
  					
  				</div> <!-- end jumbotron -->
  				
@@ -77,37 +81,38 @@
  			
  		</div> <!-- end row
  		 -->
- 	</div> <!-- end container -->
+ 	
  
  
  	<div class="row">
  			<div class="col-xs-12">
  				<div class="panel panel-default">
  						<div class="panel-heading" id="panel-heading"> Add Train</div>
- 						<div class="panel-body">
- 							<form>
- 								<div class="form-group">
- 									<label>Train Name: </label>
- 									<input class="form-control" id="train-name">
- 								</div> <!-- end form group -->
- 								<div class="form-group">
- 									<label>Destination: </label>
- 									<input class="form-control" id="destination">
- 								</div><!-- end form group -->
- 								<div class="form-group">
- 									<label>First Train Time (HH:MM - military time): </abel> +									<input class="form-control" id="first-train-time">
- 								</div><!-- end form group -->
- 								<div class="form-group">
- 									<label>Frequency (min): </label>
- 									<input class="form-control" id="frequency">
- 								</div><!-- end form group -->
- 								<button type="button" class="btn btn-default" id="submit-button"> Submit</button>
- 							</form>
- 						</div> <!-- end panel body -->
- 				</div> <!-- end panel heading -->
- 			</div><!-- end panel panel default -->
- 		</div><!-- end col XS 12 -->
+	 						<div class="panel-body">
+	 							<form>
+	 								<div class="form-group">
+	 									<label>Train Name </label>
+	 									<input class="form-control" id="train-name">
+	 								</div> <!-- end form group -->
+	 								<div class="form-group">
+	 									<label>Destination </label>
+	 									<input class="form-control" id="destination">
+	 								</div><!-- end form group -->
+	 								<div class="form-group">
+	 									<label>First Train Time (HH:MM - military time) </abel> <input class="form-control" id="first-train-time">
+	 								</div><!-- end form group -->
+	 								<div class="form-group">
+	 									<label>Frequency (min) </label>
+	 									<input class="form-control" id="frequency">
+	 								</div><!-- end form group -->
+	 								<button type="button" class="btn btn-default" id="submit-button"> Submit</button>
+	 							</form>
+	 						</div> <!-- end panel body -->
+ 						</div> <!-- end panel heading -->
+ 					</div><!-- end panel panel default -->
+ 			</div><!-- end col XS 12 -->
  	</div> <!-- end row -->
+ 	</div> <!-- end container -->
 
  	<div class="container">
         <div class="row">
@@ -120,5 +125,7 @@
 	</div> <!-- end container -->
  
  	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="assets/javascript/moment.js"></script>
+
  </body>
  </html> 

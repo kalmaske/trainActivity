@@ -5,6 +5,7 @@ body{
 .jumbotron{
   background-color: #426E70;
   color:white;
+  text-align: center;
 }
 #panel-heading{
   background-color: #426E70;
