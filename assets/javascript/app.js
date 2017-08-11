@@ -12,7 +12,6 @@ var config = {
   firebase.initializeApp(config);
   database = firebase.database();
 
-  //any time trains is changed in firebase the table is updated
   database.ref("/trains").on("value", function(snapshot) {
     $("#trains").empty();
     snapshot.forEach(function(eachTrain) {
@@ -20,7 +19,6 @@ var config = {
     });
   });
 
-  //submit - object is created pushed to firebase
   $("#submit-button").on("click", function(){
 
     var newTrain = {
@@ -31,14 +29,35 @@ var config = {
       }
     database.ref("trains").push(newTrain);
 
-    //user input are reset in the DOM
     $("#train-name").val("");
     $("#destination").val("");
     $("#first-train-time").val("");
     $("#frequency").val("");
 
-    //to make sure page is not refreshed
   	return false;
   });
-  //create each table row
-  
+
+
+  function drawTableRow(train){
+    var tr = $("<tr>");
+    tr.append($('<td class="text-center">').text(train.trainName));
+    tr.append($('<td class="text-center">').text(train.destination));
+    tr.append($('<td class="text-center">').text(train.frequency));
+
+
+    var tFrequency = train.frequency;
+    var firstTrainTime = train.firstTrainTime;
+    var currentTime = moment();
+    var subtractYear = moment(firstTrainTime, "hh:mm").subtract(1, "years");
+    var timeDiff = currentTime.diff(moment(subtractYear), "minutes");
+    var remainder = timeDiff % tFrequency;
+    var minToNextTrain = tFrequency - remainder;
+    var nextTrain = currentTime.add(minToNextTrain, "minutes").format("hh:mm");
+
+    tr.append($('<td class="text-center">').text(nextTrain));
+    tr.append($('<td class="text-center">').text(minToNextTrain));
+
+    $("#trains").append(tr);
+
+  }
+});
